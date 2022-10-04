@@ -23,7 +23,7 @@ namespace MOM.Model
             FourCheeses
         }
 
-        public Size Sz { get; set; }
+        public Size Sz { get ; set; }
 
         public Kind Kd { get; set; }
 
@@ -31,9 +31,9 @@ namespace MOM.Model
 
         public Pizza(Size sz, Kind kd, double price)
         {
-            this.Sz = sz;
-            this.Kd = kd;
-            this.Price = price;
+            Sz = sz;
+            Kd = kd;
+            Price = price;
         }
 
         public override string ToString()

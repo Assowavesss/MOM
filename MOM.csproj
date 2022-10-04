@@ -55,6 +55,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Components\ClientDetails.xaml.cs">
+      <DependentUpon>ClientDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ClientListing.xaml.cs">
+      <DependentUpon>ClientListing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\ClientViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\ClientView.xaml.cs">
+      <DependentUpon>ClientView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Components\ClientDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\ClientListing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +86,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ClientView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Actor.cs" />
@@ -76,7 +99,7 @@
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\IActor.cs" />
     <Compile Include="Model\Pizza.cs" />
-    <Compile Include="Model\Command.cs" />
+    <Compile Include="Model\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

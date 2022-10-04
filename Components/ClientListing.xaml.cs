@@ -12,27 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using MOM.Model;
 
-namespace MOM
+namespace MOM.Components
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour ClientListing.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ClientListing : UserControl
     {
-        
-        public MainWindow()
+        public ClientListing()
         {
-
             InitializeComponent();
-
-     
-        }
-
-        private void ClientView_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -9,7 +9,7 @@ namespace MOM.Model
     public abstract class Actor : IActor
     {
 
-        bool IsReceived;
+        public bool IsReceived { get; set; }
         
         
         public abstract void MessageReceived();

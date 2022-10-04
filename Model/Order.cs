@@ -15,24 +15,31 @@ namespace MOM.Model
 
     internal sealed class ItemsOrder
     {
+        #region Properties
         List<Pizza> Pizzas { get; set; }
         List<Boisson> Boissons { get; set; }
+        #endregion
 
+        #region Constructors
         public ItemsOrder(List<Pizza> pizzas, List<Boisson> boissons)
         {
             Pizzas = new List<Pizza>(pizzas);
             Boissons = new List<Boisson>(boissons);
         }
+        #endregion
 
-
-        public double Price
+        #region Methods
+        public double Price()
         {
-            get
-            {
-                double priceRet = 0.0;
-                Pizzas.ForEach(e => priceRet += e.Price);
-                return priceRet;
-            }
+            double priceRet = 0.0;
+            Pizzas.ForEach(e => priceRet += e.Price);
+            return priceRet;
+        }
+
+        public string Invoice()
+        {
+            return "Price : " + Price()
+                + "\n" + ToString();
         }
 
         public override string ToString()
@@ -44,22 +51,37 @@ namespace MOM.Model
 
             return pizzasOrder + "\n" + boissonsOrder;
         }
+        #endregion
     }
 
-    class Order
+    sealed class Order
     {
+        #region Status
+        public enum Status
+        {
+            Prepartion,
+            Delivery,
+            Delivered
+        }
+        #endregion
+
+        #region Fields
+       
+        #endregion
+
         #region Properties
         public uint Number { get; set; }
 
         public DateTime OrderSchedule { get; set; }
         
-        public string NameClient { get; set; }
+        public string NameClient { get; set; } 
 
         public string NameClerk { get; set; }
 
         public ItemsOrder Items { get; set; }
-        #endregion
 
+        public Status State { get; set; }
+        #endregion
 
         #region Constructors
         public Order(uint number,
@@ -74,9 +96,11 @@ namespace MOM.Model
             NameClient = nameClient;
             NameClerk = nameClerk;
             Items = new ItemsOrder(new List<Pizza>(pizzas),new List<Boisson>(boissons));
+            State = Status.Prepartion;
         }
         #endregion
 
+        #region Method
         public void SendMessage(IActor actor)
         {
             actor.MessageReceived();
@@ -84,9 +108,14 @@ namespace MOM.Model
 
         public string Invoice()
         {
-            return this.ToString();
+            return Items.Invoice();
         }
 
+        public DeliveryMan SendDeliveryMan(string adress)
+        {
+            State = Status.Delivery;
+            return new DeliveryMan(this, adress);
+        }
 
         public override string ToString()
         {
@@ -94,7 +123,9 @@ namespace MOM.Model
                 + "\nSchedule Order : " + OrderSchedule.ToString()
                 + "\nName of client : " + NameClient
                 + "\nName of clerk : " + NameClerk
-                + "\nOrder detaisl : " + Items.ToString();
+                + "\nItems : " + Items.ToString()
+                + "\nState : " + State.ToString();
         }
+        #endregion
     }
 }

@@ -13,3 +13,10 @@ C:\Users\User\Documents\MOM\MOM\obj\Debug\MOM.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\MOM\MOM\obj\Debug\MOM.exe
 C:\Users\User\Documents\MOM\MOM\obj\Debug\MOM.pdb
 C:\Users\User\Documents\MOM\MOM\obj\Debug\MOM.csprojAssemblyReference.cache
+C:\Users\User\Documents\MOM\MOM\obj\Debug\Components\ClientDetails.g.cs
+C:\Users\User\Documents\MOM\MOM\obj\Debug\Views\ClientView.g.cs
+C:\Users\User\Documents\MOM\MOM\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\Documents\MOM\MOM\obj\Debug\Components\ClientDetails.baml
+C:\Users\User\Documents\MOM\MOM\obj\Debug\Views\ClientView.baml
+C:\Users\User\Documents\MOM\MOM\obj\Debug\Components\ClientListing.g.cs
+C:\Users\User\Documents\MOM\MOM\obj\Debug\Components\ClientListing.baml

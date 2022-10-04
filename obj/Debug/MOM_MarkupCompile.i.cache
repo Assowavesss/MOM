@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\User\Documents\MOM\MOM\App.xaml
-11151548125
+4-962883816
 
-14-1878359672
+19-154726123
 13-1505183044
-MainWindow.xaml;
+Components\ClientDetails.xaml;Components\ClientListing.xaml;MainWindow.xaml;Views\ClientView.xaml;
 
 False
 
