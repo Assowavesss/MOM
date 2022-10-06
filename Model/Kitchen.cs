@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MOM.Model
 {
-    class Kitchen : Actor
+    class Kitchen : IActor
     {
-        public override void MessageReceived()
+        public void MessageReceived()
         {
             Console.WriteLine("Nous prenons en charge votre command");
         }

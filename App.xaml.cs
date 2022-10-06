@@ -15,10 +15,10 @@ namespace MOM
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new MainWindow();
+            /*MainWindow = new MainWindow();
             MainWindow.Show();
             
-            base.OnStartup(e);
+            base.OnStartup(e);*/
         }
     }
 }

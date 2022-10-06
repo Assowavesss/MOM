@@ -23,6 +23,10 @@ namespace MOM.Components
         public ClientListing()
         {
             InitializeComponent();
+            List<string> items = new List<string>();
+            items.Add("bonjoru");
+            items.Add("enregoir");
+            clientListing.ItemsSource = items;
         }
     }
 }

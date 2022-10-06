@@ -12,16 +12,14 @@ namespace MOM.Model
         #region Properties
         public Order Ord{ get; set; }
 
-        public string Adress { get; set; }
+        public string DeliveryAdress { get; set; }
         #endregion
 
-        public DeliveryMan(Order ord,string adress)
+        public DeliveryMan(string firstName, string lastName ) : base(firstName,lastName )
         {
-            Ord = ord;
-            Adress = adress;
+            
+           
         }
-
-
 
         public override void MessageReceived()
         {

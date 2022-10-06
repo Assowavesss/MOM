@@ -25,9 +25,7 @@ namespace MOM
         public MainWindow()
         {
 
-            InitializeComponent();
-
-     
+            
         }
 
         private void ClientView_Loaded(object sender, RoutedEventArgs e)

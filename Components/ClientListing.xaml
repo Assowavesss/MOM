@@ -8,6 +8,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="coucou"/>
+        <ListView Margin="10" Name="clientListing"></ListView>
     </Grid>
 </UserControl>

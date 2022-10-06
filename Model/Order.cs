@@ -100,7 +100,7 @@ namespace MOM.Model
         }
         #endregion
 
-        #region Method
+        #region Methods
         public void SendMessage(IActor actor)
         {
             actor.MessageReceived();
@@ -114,7 +114,7 @@ namespace MOM.Model
         public DeliveryMan SendDeliveryMan(string adress)
         {
             State = Status.Delivery;
-            return new DeliveryMan(this, adress);
+            return null;
         }
 
         public override string ToString()
